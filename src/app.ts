@@ -3,6 +3,7 @@ const app: Application = express()
 import cors from "cors"
 import morgan from "morgan"
 import authorsRoute from "./routes/Authors/route"
+import booksRoute from "./routes/Books/route"
 
 app.use(cors())
 app.use(express.json())
@@ -13,5 +14,6 @@ app.get("/", (req: Request, res: Response) => {
 })
 
 app.use("/authors", authorsRoute)
+app.use("/books", booksRoute)
 
 export default app

@@ -1,17 +1,16 @@
 import mongoose, {Schema, Document} from "mongoose"
-import {IAuthor} from "./Authors.model"
 
 export interface IBook {
-  name: string
-  author: IAuthor
+  title: string
+  author: string
 }
 
 export interface IBookModel extends IBook, Document {}
 
 const BookSchema: Schema = new Schema(
   {
-    name: {type: String, required: true},
-    author: {type: String, ref: "author"},
+    title: {type: String, required: true},
+    author: {type: Schema.Types.ObjectId, required: true, ref: "author"},
   },
   {
     timestamps: true,
