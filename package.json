@@ -1,0 +1,28 @@
+{
+  "name": "first-typescript-app",
+  "version": "1.0.0",
+  "description": "learning typescript with node",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "jest --watch",
+    "dev": "nodemon ./src/index.ts",
+    "start": "node ./dist/index.js"
+  },
+  "author": "muhammad ghali",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.12",
+    "@types/express": "^4.17.13",
+    "@types/morgan": "^1.9.3",
+    "@types/node": "^17.0.23",
+    "ts-node": "^10.7.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.8",
+    "morgan": "^1.10.0"
+  }
+}
